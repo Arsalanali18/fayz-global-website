@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
-import faizLogo from "figma:asset/ac441ecf62100c442ebdccf428ac305496f46a3d.png";
+import faizLogo from "../../assets/faiz-logo.png";
+
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -29,9 +30,9 @@ export function Navbar() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img 
-              src={faizLogo} 
-              alt="Faiz Global Institute" 
+            <img
+              src={faizLogo}
+              alt="Faiz Global Institute"
               className="h-16 w-auto"
             />
           </Link>
