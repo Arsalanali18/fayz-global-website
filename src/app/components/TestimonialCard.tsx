@@ -1,20 +1,7 @@
 import { Quote } from "lucide-react";
+import { Review } from "../data/reviews";
 
-interface TestimonialCardProps {
-  name: string;
-  role: string;
-  image: string;
-  quote: string;
-  rating?: number;
-}
-
-export function TestimonialCard({
-  name,
-  role,
-  image,
-  quote,
-  rating = 5,
-}: TestimonialCardProps) {
+export function TestimonialCard({ name, role, image, quote, rating }: Review) {
   return (
     <div className="bg-white rounded-2xl shadow-sm p-6 border border-gray-100 hover:shadow-md transition-shadow">
       <div className="flex items-center space-x-1 mb-4">
@@ -33,7 +20,7 @@ export function TestimonialCard({
       </div>
 
       <Quote className="text-amber-500 mb-4" size={32} />
-      
+
       <p className="text-gray-600 mb-6 italic">"{quote}"</p>
 
       <div className="flex items-center space-x-4">

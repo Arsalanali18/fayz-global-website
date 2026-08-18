@@ -19,12 +19,19 @@ export function BlogCard({
   category,
 }: BlogCardProps) {
   return (
-    <div className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow overflow-hidden border border-gray-100">
-      <div className="aspect-video overflow-hidden">
+    <div className="group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300">
+      {/* <div className="w-full aspect-[4/3] overflow-hidden rounded-t-2xl">
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+          className="w-full h-full object-cover object-center"
+        />
+      </div> */}
+      <div className="w-full overflow-hidden rounded-t-2xl">
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>
       <div className="p-6 space-y-4">
@@ -35,7 +42,7 @@ export function BlogCard({
             <span>{date}</span>
           </div>
         </div>
-        
+
         <h3 className="text-xl font-semibold text-gray-900 line-clamp-2">
           {title}
         </h3>

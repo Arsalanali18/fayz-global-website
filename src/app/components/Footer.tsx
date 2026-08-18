@@ -6,60 +6,34 @@ import {
   Youtube,
   Mail,
   Phone,
-  MapPin,
 } from "lucide-react";
 import faizLogo from "../../assets/faiz-logo.png";
 
 export function Footer() {
   return (
     <footer className="bg-gray-50 border-t border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Logo and Description */}
-          <div className="space-y-4">
-            <Link to="/" className="flex items-center">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          {/* Logo + Description */}
+          <div className="space-y-5">
+            <Link to="/" className="inline-block">
               <img
                 src={faizLogo}
-                alt="Faiz Global Institute"
-                className="h-14 w-auto"
+                alt="Fayz Global Institute"
+                className="h-24 w-auto"
               />
             </Link>
-            <p className="text-gray-600 text-sm">
+
+            <p className="text-gray-600 text-sm leading-relaxed max-w-xs">
               Professional Hijama therapy services and training courses.
               Promoting traditional healing with modern standards.
             </p>
-            <div className="flex space-x-4">
-              <a
-                href="#"
-                className="text-gray-600 hover:text-blue-600 transition-colors"
-              >
-                <Facebook size={20} />
-              </a>
-              <a
-                href="#"
-                className="text-gray-600 hover:text-blue-600 transition-colors"
-              >
-                <Instagram size={20} />
-              </a>
-              <a
-                href="#"
-                className="text-gray-600 hover:text-blue-600 transition-colors"
-              >
-                <Twitter size={20} />
-              </a>
-              <a
-                href="#"
-                className="text-gray-600 hover:text-blue-600 transition-colors"
-              >
-                <Youtube size={20} />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h3 className="font-semibold text-gray-900 mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+          <div className="space-y-5">
+            <h3 className="font-semibold text-gray-900">Quick Links</h3>
+            <ul className="space-y-3">
               <li>
                 <Link
                   to="/"
@@ -96,9 +70,9 @@ export function Footer() {
           </div>
 
           {/* Resources */}
-          <div>
-            <h3 className="font-semibold text-gray-900 mb-4">Resources</h3>
-            <ul className="space-y-2">
+          <div className="space-y-5">
+            <h3 className="font-semibold text-gray-900">Resources</h3>
+            <ul className="space-y-3">
               <li>
                 <Link
                   to="/blog"
@@ -112,7 +86,7 @@ export function Footer() {
                   to="/shop"
                   className="text-gray-600 hover:text-blue-600 transition-colors text-sm"
                 >
-                  Shop
+                  Testimonials
                 </Link>
               </li>
               <li>
@@ -126,32 +100,58 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info */}
-          <div>
-            <h3 className="font-semibold text-gray-900 mb-4">Contact Us</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start space-x-2 text-sm text-gray-600">
-                <MapPin
-                  size={18}
-                  className="text-amber-500 flex-shrink-0 mt-0.5"
-                />
-                <span>123 Wellness Street, Health City, HC 12345</span>
-              </li>
-              <li className="flex items-center space-x-2 text-sm text-gray-600">
-                <Phone size={18} className="text-amber-500 flex-shrink-0" />
-                <span>+1 (555) 123-4567</span>
-              </li>
-              <li className="flex items-center space-x-2 text-sm text-gray-600">
-                <Mail size={18} className="text-amber-500 flex-shrink-0" />
-                <span>info@faizglobal.com</span>
-              </li>
-            </ul>
+          {/* Contact */}
+          <div className="space-y-5">
+            <h3 className="font-semibold text-gray-900">Contact Us</h3>
+
+            <div className="space-y-4">
+              <div className="flex items-start space-x-3 text-sm text-gray-600">
+                <Phone size={18} className="text-amber-500 mt-0.5" />
+                <span>+91 97051 06472</span>
+              </div>
+
+              <div className="flex items-start space-x-3 text-sm text-gray-600">
+                <Mail size={18} className="text-amber-500 mt-0.5" />
+                <span>naturalhealingwithda@gmail.com</span>
+              </div>
+            </div>
+
+            {/* Social Icons */}
+            <div className="flex items-center space-x-7 pt-2">
+              <a
+                href="https://www.facebook.com/fayzglobalinstitute"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-blue-600 transition-colors"
+              >
+                <Facebook size={20} />
+              </a>
+
+              <a
+                href="https://www.instagram.com/fayzglobalinstitute"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-blue-600 transition-colors"
+              >
+                <Instagram size={20} />
+              </a>
+
+              <a
+                href="http://www.youtube.com/@fayzglobalinstitute"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-blue-600 transition-colors"
+              >
+                <Youtube size={20} />
+              </a>
+            </div>
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-gray-200 text-center text-sm text-gray-600">
+        {/* Bottom Line */}
+        <div className="mt-12 pt-8 border-t border-gray-200 text-center text-sm text-gray-600">
           <p>
-            © 2026 Faiz Global Institute of Healthcare Research & Training. All
+            © 2026 Fayz Global Institute of Healthcare Research & Training. All
             rights reserved.
           </p>
         </div>

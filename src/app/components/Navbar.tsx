@@ -4,7 +4,6 @@ import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 import faizLogo from "../../assets/faiz-logo.png";
 
-
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
@@ -15,7 +14,8 @@ export function Navbar() {
     { name: "About", path: "/about" },
     { name: "Success Stories", path: "/success-stories" },
     { name: "Blog", path: "/blog" },
-    { name: "Shop", path: "/shop" },
+    { name: "Testimonials", path: "/shop" },
+    { name: "FAQ", path: "/faq" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -27,13 +27,13 @@ export function Navbar() {
   return (
     <nav className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-24">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
               src={faizLogo}
-              alt="Faiz Global Institute"
-              className="h-16 w-auto"
+              alt="Fayz Global Institute"
+              className="h-20 w-auto"
             />
           </Link>
 
@@ -60,7 +60,13 @@ export function Navbar() {
               asChild
               className="bg-blue-600 hover:bg-blue-700 text-white"
             >
-              <Link to="/contact">Book Now</Link>
+              <a
+                href="https://imjo.in/23n6Fg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Book Clarity Call Now
+              </a>
             </Button>
           </div>
 
@@ -96,9 +102,14 @@ export function Navbar() {
               asChild
               className="w-full bg-blue-600 hover:bg-blue-700 text-white"
             >
-              <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
-                Book Now
-              </Link>
+              <a
+                href="https://imjo.in/23n6Fg"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Book Clarity Call
+              </a>
             </Button>
           </div>
         </div>
